@@ -1,0 +1,505 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} {{parent()}} {% endblock %}
+{% block header %}
+	{{parent()}}
+
+{% endblock%}
+{% block body %}
+	<br>
+	<br>
+	<br>
+	<br>
+	<!-- Start About -->
+	{% if app.user %}
+
+
+
+
+
+
+
+	<div class="about-section-box">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6 col-md-6 col-sm-12">
+					<img src="{{asset('images/about-img.jpg')}}" alt="" class="img-fluid">
+				</div>
+				<div class="col-lg-6 col-md-6 col-sm-12 text-center">
+					<div class="inner-column">
+						<h1> <span>BIENVENU CHEZ RESTAURANT WAKKALNI</span></h1>
+						<h4>Petite Histoire</h4>
+						<p> Le restaurant connu sous le nom "WAKALNI" apparaît autour du XVIII siècle en France ,c'était à l'époque un bouillon de viande revigorant consumé pour retrouver des forces , il a fallu attendre la Révolution française puis l’industrialisation pour voir naître et se développer les établissements culinaires tels que nous les connaissons aujourd’hui , il faut savoir que le restaurant moderne n’est pas une création de toutes pièces puis l’activité de restauration hors de la sphère privée existe depuis des millénaires puis c'est en 1765 Mathurin Roze de Chantoiseau ouvre le premier restaurant moderne dans le quartier du Louvre à Paris pour proposer un service révolutionnaire c'est-à-dire des tables individuelles et des plats à choisir sur un menu , les clients manger à l'extérieur c'était une activité réservée aux voyageurs </p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- End About -->
+
+	<!-- Start QT -->
+	<div class="qt-box qt-background">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8 ml-auto mr-auto text-left">
+					<p class="lead ">
+						"Si vous n'êtes pas celui qui cuisine, restez à l'écart et félicitez le chef."
+					</p>
+					<span class="lead">Michael Strahan</span>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- End QT -->
+
+	<!-- Start Menu -->
+	<div class="menu-box">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="heading-title text-center">
+						<h2> Menu Special</h2>
+						<p>l'extraordinaire se trouve sur nos menus</p>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="special-menu text-center">
+						<div class="button-group filter-button-group">
+							<button class="active" data-filter="*">Tout</button>
+							<button data-filter=".drinks">Boissons</button>
+							<button data-filter=".lunch">Déjeuner</button>
+							<button data-filter=".dinner">Dîner</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row special-list">
+				<a href="{{ path('commande_index') }}">
+				<div class="col-lg-4 col-md-6 special-grid drinks">
+					<div class="gallery-single fix">
+						<img src="images/img-01.jpg" class="img-fluid" alt="Image">
+						<div class="why-text">
+							<h4>Boissons Special 1</h4>
+							<p>Whiskey cocktail	</p>
+							<h5> 15DT</h5>
+						</div>
+					</div>
+				</div>
+				</a>
+				<a href="{{ path('commande_index') }}">
+				<div class="col-lg-4 col-md-6 special-grid drinks">
+					<div class="gallery-single fix">
+						<img src="images/img-02.jpg" class="img-fluid" alt="Image">
+						<div class="why-text">
+							<h4>Boissons Special 2</h4>
+							<p>Mojito Fraise</p>
+							<h5>8DT</h5>
+						</div>
+					</div>
+				</div>
+				</a>
+				<a href="{{ path('commande_index') }}">
+				<div class="col-lg-4 col-md-6 special-grid drinks">
+					<div class="gallery-single fix">
+						<img src="images/img-03.jpg" class="img-fluid" alt="Image">
+						<div class="why-text">
+							<h4>Boissons Special 3</h4>
+							<p>Biére Belge</p>
+							<h5>7DT</h5>
+						</div>
+					</div>
+				</div>
+				</a>
+				<a href="{{ path('commande_index') }}">
+				<div class="col-lg-4 col-md-6 special-grid lunch">
+					<div class="gallery-single fix">
+						<img src="images/img-04.jpg" class="img-fluid" alt="Image">
+						<div class="why-text">
+							<h4>Special Déjeuner 1</h4>
+							<p>Burger + Frites</p>
+							<h5>13DT</h5>
+						</div>
+					</div>
+				</div>
+				</a>
+				<a href="{{ path('commande_index') }}">
+				<div class="col-lg-4 col-md-6 special-grid lunch">
+					<div class="gallery-single fix">
+						<img src="images/img-05.jpg" class="img-fluid" alt="Image">
+						<div class="why-text">
+							<h4>Special Déjeuner 2</h4>
+							<p>Salade césar</p>
+							<h5>10DT</h5>
+						</div>
+					</div>
+				</div>
+				</a>
+				<a href="{{ path('commande_index') }}">
+				<div class="col-lg-4 col-md-6 special-grid lunch">
+					<div class="gallery-single fix">
+						<img src="images/img-06.jpg" class="img-fluid" alt="Image">
+						<div class="why-text">
+							<h4>Special Déjeuner 3</h4>
+							<p>Saumon Fumé</p>
+							<h5>20DT</h5>
+						</div>
+					</div>
+				</div>
+				</a>
+				<a href="{{ path('commande_index') }}">
+				<div class="col-lg-4 col-md-6 special-grid dinner">
+					<div class="gallery-single fix">
+						<img src="images/img-07.jpg" class="img-fluid" alt="Image">
+						<div class="why-text">
+							<h4>Special Diner 1</h4>
+							<p>Plat Viande chevaline au miso et au yuzu</p>
+							<h5>25DT</h5>
+						</div>
+					</div>
+				</div>
+				</a>
+				<a href="{{ path('commande_index') }}">
+				<div class="col-lg-4 col-md-6 special-grid dinner">
+					<div class="gallery-single fix">
+						<img src="images/img-08.jpg" class="img-fluid" alt="Image">
+						<div class="why-text">
+							<h4>Special Diner 2</h4>
+							<p>Miso Soup with Greens and Tofu</p>
+							<h5>23DT</h5>
+						</div>
+					</div>
+				</div>
+				</a>
+				<a href="{{ path('commande_index') }}">
+				<div class="col-lg-4 col-md-6 special-grid dinner">
+					<div class="gallery-single fix">
+						<img src="images/img-09.jpg" class="img-fluid" alt="Image">
+						<div class="why-text">
+							<h4>Special Diner 3</h4>
+							<p>Rôti à la poêle</p>
+							<h5>25DT</h5>
+						</div>
+					</div>
+				</div>
+				</a>
+			</div>
+		</div>
+	</div>
+
+	{% else %}
+
+
+
+
+
+
+
+
+	<div class="about-section-box">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6 col-md-6 col-sm-12">
+					<img src="{{asset('images/about-img.jpg')}}" alt="" class="img-fluid">
+				</div>
+				<div class="col-lg-6 col-md-6 col-sm-12 text-center">
+					<div class="inner-column">
+						<h1> <span>BIENVENU CHEZ RESTAURANT WAKKALNI</span></h1>
+						<h4>Petite Histoire</h4>
+						<p> Le restaurant connu sous le nom "WAKALNI" apparaît autour du XVIII siècle en France ,c'était à l'époque un bouillon de viande revigorant consumé pour retrouver des forces , il a fallu attendre la Révolution française puis l’industrialisation pour voir naître et se développer les établissements culinaires tels que nous les connaissons aujourd’hui , il faut savoir que le restaurant moderne n’est pas une création de toutes pièces puis l’activité de restauration hors de la sphère privée existe depuis des millénaires puis c'est en 1765 Mathurin Roze de Chantoiseau ouvre le premier restaurant moderne dans le quartier du Louvre à Paris pour proposer un service révolutionnaire c'est-à-dire des tables individuelles et des plats à choisir sur un menu , les clients manger à l'extérieur c'était une activité réservée aux voyageurs </p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- End About -->
+
+	<!-- Start QT -->
+	<div class="qt-box qt-background">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8 ml-auto mr-auto text-left">
+					<p class="lead ">
+						"Si vous n'êtes pas celui qui cuisine, restez à l'écart et félicitez le chef."
+					</p>
+					<span class="lead">Michael Strahan</span>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- End QT -->
+
+	<!-- Start Menu -->
+	<div class="menu-box">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="heading-title text-center">
+						<h2> Menu Special</h2>
+						<p>l'extraordinaire se trouve sur nos menus</p>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="special-menu text-center">
+						<div class="button-group filter-button-group">
+							<button class="active" data-filter="*">Tout</button>
+							<button data-filter=".drinks">Boissons</button>
+							<button data-filter=".lunch">Déjeuner</button>
+							<button data-filter=".dinner">Dîner</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row special-list">
+				<div class="col-lg-4 col-md-6 special-grid drinks">
+					<div class="gallery-single fix">
+						<img src="images/img-01.jpg" class="img-fluid" alt="Image">
+						<div class="why-text">
+							<h4>Boissons Special 1</h4>
+							<p>Whiskey cocktail	</p>
+							<h5> 15DT</h5>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-lg-4 col-md-6 special-grid drinks">
+					<div class="gallery-single fix">
+						<img src="images/img-02.jpg" class="img-fluid" alt="Image">
+						<div class="why-text">
+							<h4>Boissons Special 2</h4>
+							<p>Mojito Fraise</p>
+							<h5>8DT</h5>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 special-grid drinks">
+					<div class="gallery-single fix">
+						<a>
+						<img src="images/img-03.jpg" class="img-fluid" alt="Image">
+						<div class="why-text">
+							<h4>Boissons Special 3</h4>
+							<p>Biére Belge</p>
+							<h5>7DT</h5>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-lg-4 col-md-6 special-grid lunch">
+					<div class="gallery-single fix">
+						<img src="images/img-04.jpg" class="img-fluid" alt="Image">
+						<div class="why-text">
+							<h4>Special Déjeuner 1</h4>
+							<p>Burger + Frites</p>
+							<h5>13DT</h5>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-lg-4 col-md-6 special-grid lunch">
+					<div class="gallery-single fix">
+						<img src="images/img-05.jpg" class="img-fluid" alt="Image">
+						<div class="why-text">
+							<h4>Special Déjeuner 2</h4>
+							<p>Salade césar</p>
+							<h5>10DT</h5>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-lg-4 col-md-6 special-grid lunch">
+					<div class="gallery-single fix">
+						<img src="images/img-06.jpg" class="img-fluid" alt="Image">
+						<div class="why-text">
+							<h4>Special Déjeuner 3</h4>
+							<p>Saumon Fumé</p>
+							<h5>20DT</h5>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-lg-4 col-md-6 special-grid dinner">
+					<div class="gallery-single fix">
+						<img src="images/img-07.jpg" class="img-fluid" alt="Image">
+						<div class="why-text">
+							<h4>Special Diner 1</h4>
+							<p>Plat Viande chevaline au miso et au yuzu</p>
+							<h5>25DT</h5>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-lg-4 col-md-6 special-grid dinner">
+					<div class="gallery-single fix">
+						<img src="images/img-08.jpg" class="img-fluid" alt="Image">
+						<div class="why-text">
+							<h4>Special Diner 2</h4>
+							<p>Miso Soup with Greens and Tofu</p>
+							<h5>23DT</h5>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-lg-4 col-md-6 special-grid dinner">
+					<div class="gallery-single fix">
+						<img src="images/img-09.jpg" class="img-fluid" alt="Image">
+						<div class="why-text">
+							<h4>Special Diner 3</h4>
+							<p>Rôti à la poêle</p>
+							<h5>25DT</h5>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	{% endif %}
+	<!-- End Menu -->
+
+	<!-- Start Gallery -->
+	<div class="gallery-box">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="heading-title text-center">
+						<h2>Gallery</h2>
+						<p>Au restaurant chaque désir s'additionne.</p>
+					</div>
+				</div>
+			</div>
+			<div class="tz-gallery">
+				<div class="row">
+					<div class="col-sm-12 col-md-4 col-lg-4">
+						<a class="lightbox" href="images/gallery-img-01.jpg">
+							<img class="img-fluid" src="images/gallery-img-01.jpg" alt="Gallery Images">
+						</a>
+					</div>
+					<div class="col-sm-6 col-md-4 col-lg-4">
+						<a class="lightbox" href="images/gallery-img-02.jpg">
+							<img class="img-fluid" src="images/gallery-img-02.jpg" alt="Gallery Images">
+						</a>
+					</div>
+					<div class="col-sm-6 col-md-4 col-lg-4">
+						<a class="lightbox" href="images/gallery-img-03.jpg">
+							<img class="img-fluid" src="images/gallery-img-03.jpg" alt="Gallery Images">
+						</a>
+					</div>
+					<div class="col-sm-12 col-md-4 col-lg-4">
+						<a class="lightbox" href="images/gallery-img-04.jpg">
+							<img class="img-fluid" src="images/gallery-img-04.jpg" alt="Gallery Images">
+						</a>
+					</div>
+					<div class="col-sm-6 col-md-4 col-lg-4">
+						<a class="lightbox" href="images/gallery-img-05.jpg">
+							<img class="img-fluid" src="images/gallery-img-05.jpg" alt="Gallery Images">
+						</a>
+					</div>
+					<div class="col-sm-6 col-md-4 col-lg-4">
+						<a class="lightbox" href="images/gallery-img-06.jpg">
+							<img class="img-fluid" src="images/gallery-img-06.jpg" alt="Gallery Images">
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- End Gallery -->
+
+	<!-- Start Customer Reviews -->
+	<div class="customer-reviews-box">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="heading-title text-center">
+						<h2>Avis Des Clients</h2>
+						<p>La cuisine est le coeur d'un restaurant, vous êtes son âme</p>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-8 mr-auto ml-auto text-center">
+					<div id="reviews" class="carousel slide" data-ride="carousel">
+						<div class="carousel-inner mt-4">
+							<div class="carousel-item text-center active">
+								<div class="img-box p-1 border rounded-circle m-auto">
+									<img class="d-block w-100 rounded-circle" src="images/profile-1.jpg" alt="">
+								</div>
+								<h5 class="mt-4 mb-0"><strong class="text-warning text-uppercase">Paul Mitchel</strong></h5>
+								<h6 class="text-dark m-0">Web Developer</h6>
+								<p class="m-0 pt-3">Parfait , à refaire avec grand plaisir . accueil parfait une équipe très professionnelle. Nous recommandons vivement. Merci</p>
+							</div>
+							<div class="carousel-item text-center">
+								<div class="img-box p-1 border rounded-circle m-auto">
+									<img class="d-block w-100 rounded-circle" src="images/profile-3.jpg" alt="">
+								</div>
+								<h5 class="mt-4 mb-0"><strong class="text-warning text-uppercase">Steve Fonsi</strong></h5>
+								<h6 class="text-dark m-0">Web Designer</h6>
+								<p class="m-0 pt-3">Très bonne ambiance, plats raffinés ,accueil à table très moyen,piscine accueil très bien. Réception moyenne</p>
+							</div>
+							<div class="carousel-item text-center">
+								<div class="img-box p-1 border rounded-circle m-auto">
+									<img class="d-block w-100 rounded-circle" src="images/profile-7.jpg" alt="">
+								</div>
+								<h5 class="mt-4 mb-0"><strong class="text-warning text-uppercase">Daniel vebar</strong></h5>
+								<h6 class="text-dark m-0">Seo Analyst</h6>
+								<p class="m-0 pt-3">Cuisine raffinée et gastronomique. Cadre agréable et apaisant. Personnel discret et agréable.</p>
+							</div>
+						</div>
+						<a class="carousel-control-prev" href="#reviews" role="button" data-slide="prev">
+							<i class="fa fa-angle-left" aria-hidden="true"></i>
+							<span class="sr-only">Previous</span>
+						</a>
+						<a class="carousel-control-next" href="#reviews" role="button" data-slide="next">
+							<i class="fa fa-angle-right" aria-hidden="true"></i>
+							<span class="sr-only">Next</span>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- End Customer Reviews -->
+
+	<!-- Start Contact info -->
+	<div class="contact-imfo-box">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4">
+					<i class="fa fa-volume-control-phone"></i>
+					<div class="overflow-hidden">
+						<h4>telephone</h4>
+						<p class="lead">
+							+21699162141
+						</p>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<i class="fa fa-envelope"></i>
+					<div class="overflow-hidden">
+						<h4>Email</h4>
+						<p class="lead">
+							yourmail@gmail.com
+						</p>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<i class="fa fa-map-marker"></i>
+					<div class="overflow-hidden">
+						<h4>Location</h4>
+						<p class="lead">
+							Cite Olimpique Tunis
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- End Contact info -->
+
+{% endblock %}

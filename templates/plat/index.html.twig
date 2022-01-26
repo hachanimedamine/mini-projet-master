@@ -1,0 +1,44 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Listes des Plats{% endblock %}
+
+{% block body %}
+    <br><br><br><br>
+    <h1>Listes des Plats</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+
+                <th>Catégorie</th>
+                <th>Nomplat</th>
+                <th>Description</th>
+                <th>Code</th>
+                <th>Prix</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for plat in plats %}
+            <tr>
+
+                <td>{{ plat.categorie }}</td>
+                <td>{{ plat.nomplat }}</td>
+                <td>{{ plat.description }}</td>
+                <td>{{ plat.code }}</td>
+                <td>{{ plat.prix }}</td>
+                <td>
+                    <a href="{{ path('plat_show', {'id': plat.id}) }}">Afficher</a>
+                    <a href="{{ path('plat_edit', {'id': plat.id}) }}">Modifier</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="6">Liste Vide</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('plat_new') }}">Ajouter Plat</a>
+{% endblock %}
